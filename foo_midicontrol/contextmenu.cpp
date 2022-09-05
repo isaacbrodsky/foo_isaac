@@ -120,8 +120,6 @@ private:
         midiInClose(hMidiDevice);
         hMidiDevice = NULL;
         selectedMidiInDevice = -1;
-
-        popup_message::g_show("Stopped.", "MIDI Control");
     }
 
     void StartMidi(t_uint32 midiPort) {
@@ -139,8 +137,6 @@ private:
 
         midiInStart(hMidiDevice);
         selectedMidiInDevice = midiPort;
-
-        popup_message::g_show("Started.", "MIDI Control");
     }
 
 public:
@@ -195,8 +191,6 @@ private:
         selectedMidiOutDevice = -1;
         midiOutClose(hMidiOutDevice);
         hMidiOutDevice = NULL;
-
-        popup_message::g_show("Stopped output.", "MIDI Control");
     }
 
     void StartMidi(t_uint32 midiPort) {
@@ -213,10 +207,6 @@ private:
         }
 
         selectedMidiOutDevice = midiPort;
-
-
-
-        popup_message::g_show("Started.", "MIDI Control");
     }
 
 public:
